@@ -151,6 +151,11 @@
   .hero-sub strong{color:var(--text);font-weight:600}
   .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-bottom:56px}
 
+  .hero-note{
+    font-family:var(--mono);font-size:13.5px;letter-spacing:.06em;color:var(--muted);
+    margin:-38px 0 46px;
+  }
+  .hero-note strong{color:var(--cyan);font-weight:500}
   .countdown{display:flex;gap:14px;flex-wrap:wrap}
   .cd-cell{
     min-width:86px;padding:14px 16px;border-radius:14px;text-align:center;
@@ -387,6 +392,7 @@
       <a class="btn btn-primary" data-register href="#register">Register now</a>
       <a class="btn btn-ghost" href="#openday">Explore the Open Day</a>
     </div>
+    <p class="hero-note" id="opens-note">Registration opens <strong>2 October</strong></p>
     <div>
       <div class="cd-title">Quantum Open Day begins in</div>
       <div class="countdown" aria-live="polite">
@@ -507,13 +513,9 @@
       </div>
       <div class="tl-item reveal">
         <div class="tl-time">14:00 — 16:00</div>
-        <h3>Guest speaker + laptop setup</h3>
-        <p>A guest speaker from the quantum world joins us live on the big screen — open to all students. Meanwhile, registered participants get their laptops set up with our software team, ready to run quantum code in Session 1.</p>
-      </div>
-      <div class="tl-item reveal">
-        <div class="tl-time">16:00 — 17:00</div>
-        <h3>Lunch &amp; closing</h3>
-        <p>We wrap the day together over lunch — on us — and get you ready for what starts on Tuesday.</p>
+        <h3>Guest speaker</h3>
+        <p>A guest speaker from the quantum world joins us live on the big screen, and we watch together in the room — a chance to hear what working in quantum computing actually looks like.</p>
+        <div class="note-open">Open to everyone — no registration needed</div>
       </div>
     </div>
   </div>
@@ -531,34 +533,34 @@
         <div class="sess-id">Session 0</div>
         <div class="sess-date">Sat, 10 Oct</div>
         <div class="sess-time">11:00 – 17:00</div>
-        <div class="sess-focus">Quantum Open Day — booths, guest speaker &amp; setup</div>
+        <div class="sess-focus">Quantum Open Day — booths &amp; guest speaker</div>
       </div>
       <div class="sess reveal">
         <div class="sess-id">Session 1</div>
         <div class="sess-date">Tue, 13 Oct</div>
-        <div class="sess-time">14:30 – 16:00</div>
+        <div class="sess-time">14:00 – 16:00</div>
         <div class="sess-focus">First qubits, first circuits — hands-on</div>
       </div>
       <div class="sess reveal">
         <div class="sess-id">Session 2</div>
         <div class="sess-date">Tue, 20 Oct</div>
-        <div class="sess-time">14:30 – 16:00</div>
+        <div class="sess-time">14:00 – 16:00</div>
         <div class="sess-focus">Deeper into the quantum toolbox</div>
       </div>
       <div class="sess reveal">
         <div class="sess-id">Session 3</div>
         <div class="sess-date">Tue, 27 Oct</div>
-        <div class="sess-time">14:30 – 16:00</div>
+        <div class="sess-time">14:00 – 16:00</div>
         <div class="sess-focus">Real algorithms on real hardware</div>
       </div>
       <div class="sess final reveal">
         <div class="sess-id">Session 4</div>
         <div class="sess-date">Tue, 3 Nov</div>
-        <div class="sess-time">14:30 – 17:00</div>
+        <div class="sess-time">14:00 – 17:00</div>
         <div class="sess-focus">Grand finale — certificates + hackathon launch</div>
       </div>
     </div>
-    <p class="sched-note">Every working session is a <b>Tuesday at 14:30</b> — one rhythm, easy to remember.</p>
+    <p class="sched-note">Every working session is a <b>Tuesday at 14:00</b> — one rhythm, easy to remember.</p>
   </div>
 </section>
 
@@ -572,15 +574,15 @@
     <div class="faq reveal">
       <details>
         <summary>Do I need to know quantum physics or coding?</summary>
-        <div class="faq-body">No quantum background needed — the series starts from zero. A little Python helps but isn't required: at the Open Day our team sets up your laptop with you and walks you through everything, step by step.</div>
+        <div class="faq-body">No quantum background needed — the series starts from zero. A little Python helps but isn't required: our team walks you through the setup and everything after it, step by step, in the room.</div>
       </details>
       <details>
         <summary>Can I come to the Open Day without registering?</summary>
-        <div class="faq-body">Yes! The booths, games and guest speaker on 10 October are open to every student on campus. Only the laptop-setup part is reserved for registered participants — so if you want in on the full series, register first.</div>
+        <div class="faq-body">Yes! The whole Open Day on 10 October is open to every student on campus — booths, games and the guest speaker — with no registration needed. Registering is for the four working sessions that follow, so sign up if you want the full series.</div>
       </details>
       <details>
         <summary>What should I bring?</summary>
-        <div class="faq-body">Curiosity, and your laptop — especially for the setup session on Open Day and for the working sessions, since everything is hands-on.</div>
+        <div class="faq-body">For the Open Day, just curiosity. For the four working sessions, bring your laptop — everything there is hands-on.</div>
       </details>
       <details>
         <summary>What exactly is Qiskit?</summary>
@@ -598,6 +600,7 @@
       <p>No physics background. No coding experience. If you've ever wondered what's really inside a quantum computer, this series was made for you.</p>
       <a class="btn btn-primary" data-register href="#" style="font-size:18px;padding:18px 44px">Register now</a>
       <div class="fine">5 sessions · real quantum hardware · certificate · hackathon</div>
+      <div class="fine" id="opens-note-2">Registration opens 2 October</div>
     </div>
   </div>
 </section>
@@ -646,8 +649,16 @@ function showToast(msg){
   clearTimeout(toastTimer);
   toastTimer = setTimeout(()=>toast.classList.remove('show'), 3200);
 }
+const formLive = REGISTRATION_FORM_URL && REGISTRATION_FORM_URL.startsWith('http');
+if (formLive) {
+  // once registration is open, the "opens 2 October" notes are no longer needed
+  ['opens-note','opens-note-2'].forEach(id=>{
+    const el = document.getElementById(id);
+    if (el) el.hidden = true;
+  });
+}
 document.querySelectorAll('[data-register]').forEach(a=>{
-  if (REGISTRATION_FORM_URL && REGISTRATION_FORM_URL.startsWith('http')) {
+  if (formLive) {
     a.href = REGISTRATION_FORM_URL;
     a.target = '_blank';
     a.rel = 'noopener';
@@ -656,7 +667,7 @@ document.querySelectorAll('[data-register]').forEach(a=>{
       // let nav/hero buttons still scroll to the register section
       if (a.getAttribute('href') === '#') {
         e.preventDefault();
-        showToast('Registration opens very soon — follow our pages so you don\'t miss it!');
+        showToast('Registration opens 2 October — follow our pages so you don\'t miss it!');
       }
     });
   }
