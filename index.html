@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quantum Series · Qiskit Fall Fest</title>
+    <title>BZU Qiskit Fall Fest 2026</title>
     <meta
       name="description"
-      content="The Quantum Series — Birzeit University's Qiskit Fall Fest 2026, by the BZU Quantum Computing Community. Five on-campus sessions, real IBM quantum computers, zero experience required."
+      content="BZU Qiskit Fall Fest 2026 — a Quantum Open Day open to every student, then a four-Tuesday bootcamp on real IBM quantum computers. By the BZU Quantum Computing Community at Birzeit University."
     />
     <!-- Social sharing preview (Open Graph / Twitter). URLs must stay absolute.
      If the site ever moves to a custom domain, update the four URLs below to match. -->
@@ -14,11 +14,11 @@
     <meta property="og:site_name" content="BZU Quantum Computing Community" />
     <meta
       property="og:title"
-      content="Quantum Series — Qiskit Fall Fest 2026 at Birzeit University"
+      content="BZU Qiskit Fall Fest 2026 — Birzeit University"
     />
     <meta
       property="og:description"
-      content="Quantum computers won't stay a black box. Five in-person sessions with the BZU Quantum Computing Community: an open day for everyone, hands-on labs on real IBM quantum computers, certificates, and a hackathon."
+      content="Quantum computers won't stay a black box. A Quantum Open Day anyone can walk into on 10 October, then a four-session bootcamp on real IBM quantum computers — with a Certificate of Participation from IBM Quantum."
     />
     <meta
       property="og:url"
@@ -33,11 +33,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Quantum Series — Qiskit Fall Fest 2026 at Birzeit University"
+      content="BZU Qiskit Fall Fest 2026 — Birzeit University"
     />
     <meta
       name="twitter:description"
-      content="From black box to running a real IBM quantum computer — five in-person sessions at Birzeit University. Everyone's invited to the Open Day on 10 October."
+      content="From black box to running a real IBM quantum computer. Everyone's invited to the Quantum Open Day on 10 October — the bootcamp follows."
     />
     <meta
       name="twitter:image"
@@ -276,6 +276,23 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
+      }
+      .logo span {
+        white-space: nowrap;
+      }
+      @media (max-width: 560px) {
+        .logo {
+          font-size: 15px;
+          gap: 9px;
+        }
+        .logo img {
+          width: 32px;
+          height: 32px;
+        }
+        .nav .btn {
+          padding: 9px 16px;
+          font-size: 13.5px;
+        }
       }
       .nav-links {
         display: flex;
@@ -992,12 +1009,108 @@
         width: auto;
         display: block;
       }
+      .org-card img.sq {
+        height: 70px;
+      }
       .org-card span {
         color: #0c1539;
         font-weight: 600;
         font-size: 15px;
         max-width: 170px;
         line-height: 1.35;
+      }
+
+      /* ---------- programme tracks ---------- */
+      .track-label {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        font-size: 19px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        margin: 48px 0 18px;
+      }
+      .track-num {
+        font-family: var(--mono);
+        font-size: 13px;
+        font-weight: 500;
+        color: #0c1539;
+        background: var(--grad);
+        padding: 4px 10px;
+        border-radius: 8px;
+      }
+      .track-tag {
+        font-family: var(--mono);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 5px 12px;
+        border-radius: 99px;
+        color: var(--muted);
+        background: var(--panel-2);
+        box-shadow: inset 0 0 0 1px var(--line);
+      }
+      .track-tag.open {
+        color: #dcf5fb;
+        background: rgba(91, 200, 224, 0.2);
+        box-shadow: inset 0 0 0 1px rgba(91, 200, 224, 0.55);
+      }
+      .sched.sched-one {
+        grid-template-columns: minmax(0, 460px);
+        margin-top: 0;
+      }
+      .sched.sched-four {
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 0;
+      }
+      @media (max-width: 1000px) {
+        .sched.sched-four {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 560px) {
+        .sched.sched-four {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ---------- open day extras ---------- */
+      .club-chips {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 16px;
+      }
+      .club-chip {
+        font-family: var(--mono);
+        font-size: 12.5px;
+        padding: 7px 14px;
+        border-radius: 9px;
+        color: #f0f0fa;
+        background: rgba(255, 255, 255, 0.09);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+      }
+      .speaker {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 18px;
+        padding: 14px 20px;
+        border-radius: 14px;
+        background: rgba(12, 21, 57, 0.5);
+        box-shadow: inset 0 0 0 1px rgba(164, 136, 186, 0.4);
+      }
+      .speaker-name {
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .speaker-role {
+        font-family: var(--mono);
+        font-size: 12.5px;
+        color: var(--cyan);
+        margin-top: 2px;
       }
 
       /* ---------- socials ---------- */
@@ -1098,14 +1211,14 @@
   <body>
     <header id="header">
       <div class="wrap nav">
-        <a class="logo" href="#top" aria-label="Quantum Series — home">
+        <a class="logo" href="#top" aria-label="BZU Qiskit Fall Fest — home">
           <img
             src="assets/club-logo.png"
             alt="BZU Quantum Computing Community"
             width="40"
             height="40"
           />
-          <span>Quantum&nbsp;Series</span>
+          <span>BZU Qiskit Fall Fest</span>
         </a>
         <nav class="nav-links">
           <a href="#why">Why join</a>
@@ -1131,10 +1244,10 @@
         </h1>
         <p class="hero-sub">
           To most people, it's a mysterious black box.
-          <strong>After the Quantum Series, it won't be — not to you.</strong>
-          Five in-person sessions at Birzeit University that take you from "I've
-          heard of it" to running a real IBM quantum computer yourself. No
-          physics, no experience needed.
+          <strong>After this Fall Fest, it won't be — not to you.</strong>
+          An Open Day anyone can walk into, then a four-Tuesday bootcamp that
+          takes you from "I've heard of it" to running a real IBM quantum
+          computer yourself. No physics, no experience needed.
         </p>
         <div class="hero-ctas">
           <a class="btn btn-primary" data-register href="#register"
@@ -1143,7 +1256,7 @@
           <a class="btn btn-ghost" href="#openday">Explore the Open Day</a>
         </div>
         <p class="hero-note" id="opens-note">
-          Registration opens <strong>2 October</strong>
+          Registration opens <strong>10 October</strong>
         </p>
         <div>
           <div class="cd-title">Quantum Open Day begins in</div>
@@ -1193,7 +1306,7 @@
             pick an answer.
           </p>
           <p>
-            In the series you'll write the same experiment in Python and run it
+            In the bootcamp you'll write the same experiment in Python and run it
             on <strong>IBM's real quantum processors</strong> — machines kept
             colder than outer space.
           </p>
@@ -1258,8 +1371,9 @@
           <p class="lead">
             We follow IBM Qiskit's "Use a Quantum Computer Today" course —
             together, in person, hands-on, with a team beside you the whole way.
-            By the final session, "quantum" won't be a buzzword to you. It'll be
-            a tool you've used.
+            Finish the bootcamp and "quantum" stops being a buzzword — it becomes
+            a tool you've used, with a certificate from IBM Quantum to show for
+            it.
           </p>
         </div>
         <div class="cards">
@@ -1278,10 +1392,11 @@
             </p>
           </div>
           <div class="card reveal">
-            <h3><span>📜</span>Walk away certified</h3>
+            <h3><span>📜</span>Certified by IBM Quantum</h3>
             <p>
-              Complete the series and receive your certificate at the final
-              session — proof you've programmed a quantum computer.
+              Complete the four bootcamp sessions and you receive a
+              <strong>Certificate of Participation from IBM Quantum</strong> —
+              proof you've programmed a real quantum computer.
             </p>
           </div>
           <div class="card reveal">
@@ -1306,9 +1421,9 @@
           <p class="lead">
             Qiskit Fall Fest is IBM Quantum's annual, student-run celebration of
             quantum computing, hosted on campuses around the world every fall.
-            The Quantum Series is the
-            <strong>Birzeit University</strong> edition — brought to you by the
-            BZU Quantum Computing Community.
+            This is the <strong>Birzeit University</strong> edition — brought to you
+            by the BZU Quantum Computing Community, with the Innovation and
+            Development Unit.
           </p>
         </div>
         <div class="ff-art reveal">
@@ -1330,7 +1445,7 @@
       <div class="wrap">
         <div class="od-head reveal">
           <div>
-            <div class="kicker">Session 0</div>
+            <div class="kicker">Part one</div>
             <h2>Quantum <span class="grad-text">Open Day</span></h2>
             <p class="lead">
               One full day where campus goes quantum — open to
@@ -1350,22 +1465,36 @@
             <div class="tl-time">12:00 — 14:00</div>
             <h3>Booths, games &amp; challenges</h3>
             <p>
-              Beat our players at quantum games, crack puzzle challenges, step
-              inside a VR quantum experience, and meet our sponsors. Never heard
-              of quantum computing? Perfect — this part is built for you.
+              Beat our players at quantum games, crack puzzle challenges and
+              step inside a VR quantum experience. Student clubs from across
+              campus are setting up alongside us. Never heard of quantum
+              computing? Perfect — this part is built for you.
             </p>
+            <div class="club-chips">
+              <span class="club-chip">AWS</span>
+              <span class="club-chip">IEEE</span>
+              <span class="club-chip">IMechE</span>
+              <span class="club-chip">Ka3kesh</span>
+            </div>
             <div class="note-open">
               Open to everyone — no registration needed
             </div>
           </div>
           <div class="tl-item reveal">
             <div class="tl-time">14:00 — 15:00</div>
-            <h3>Guest speaker</h3>
+            <h3>Talk: Quantum and Qiskit 101</h3>
             <p>
-              A guest speaker from the quantum world joins us live on the big
-              screen, and we watch together in the room — a chance to hear what
-              working in quantum computing actually looks like.
+              The clearest hour you'll get on what a quantum computer actually
+              is, what Qiskit does, and why any of it matters — starting from
+              nothing. Joins us live on the big screen, and we watch together in
+              the room.
             </p>
+            <div class="speaker">
+              <div>
+                <div class="speaker-name">Karim Magdy</div>
+                <div class="speaker-role">Qiskit Advocate · IBM Quantum</div>
+              </div>
+            </div>
             <div class="note-open">
               Open to everyone — no registration needed
             </div>
@@ -1378,20 +1507,38 @@
     <section id="schedule" style="padding-top: 20px">
       <div class="wrap">
         <div class="reveal">
-          <div class="kicker">The roadmap</div>
+          <div class="kicker">The programme</div>
           <h2>
-            Five meetings.<br />One <span class="grad-text">quantum leap.</span>
+            Two parts.<br />One <span class="grad-text">quantum leap.</span>
           </h2>
+          <p class="lead">
+            The Open Day is a one-day festival anyone can walk into. The
+            Bootcamp is the four-Tuesday course that follows — that one needs a
+            seat.
+          </p>
         </div>
-        <div class="sched">
+
+        <p class="track-label reveal">
+          <span class="track-num">01</span> Quantum Open Day
+          <span class="track-tag open">Open to everyone</span>
+        </p>
+        <div class="sched sched-one">
           <div class="sess hot reveal">
-            <div class="sess-id">Session 0</div>
+            <div class="sess-id">Open Day</div>
             <div class="sess-date">Sat, 10 Oct</div>
             <div class="sess-time">12:00 – 17:00</div>
             <div class="sess-focus">
-              Quantum Open Day — booths &amp; guest speaker
+              Booths, club stands and the Quantum and Qiskit 101 talk — just
+              walk in, no registration
             </div>
           </div>
+        </div>
+
+        <p class="track-label reveal">
+          <span class="track-num">02</span> The Bootcamp
+          <span class="track-tag">Registration required</span>
+        </p>
+        <div class="sched sched-four">
           <div class="sess reveal">
             <div class="sess-id">Session 1</div>
             <div class="sess-date">Tue, 13 Oct</div>
@@ -1422,8 +1569,9 @@
           </div>
         </div>
         <p class="sched-note">
-          Every working session is a <b>Tuesday at 14:00</b> — one rhythm, easy
-          to remember.
+          Every bootcamp session is a <b>Tuesday at 14:00</b>. Finish all four
+          and you receive a
+          <b>Certificate of Participation from IBM Quantum</b>.
         </p>
       </div>
     </section>
@@ -1439,7 +1587,7 @@
           <details>
             <summary>Do I need to know quantum physics or coding?</summary>
             <div class="faq-body">
-              No quantum background needed — the series starts from zero. A
+              No quantum background needed — the bootcamp starts from zero. A
               little Python helps but isn't required: our team walks you through
               the setup and everything after it, step by step, in the room.
             </div>
@@ -1482,8 +1630,7 @@
           </h2>
           <p>
             No physics background. No coding experience. If you've ever wondered
-            what's really inside a quantum computer, this series was made for
-            you.
+            what's really inside a quantum computer, this was made for you.
           </p>
           <a
             class="btn btn-primary"
@@ -1493,9 +1640,9 @@
             >Register now</a
           >
           <div class="fine">
-            5 sessions · real quantum hardware · certificate · hackathon
+            Open Day + 4-session bootcamp · real quantum hardware · IBM Quantum certificate · hackathon
           </div>
-          <div class="fine" id="opens-note-2">Registration opens 2 October</div>
+          <div class="fine" id="opens-note-2">Registration opens 10 October</div>
         </div>
       </div>
     </section>
@@ -1507,13 +1654,26 @@
         <div class="orgs reveal">
           <div class="org-card">
             <img
-              src="assets/club-logo.png"
-              alt="BZU Quantum Computing Community logo"
+              src="assets/club-logo-wide.png"
+              alt="Quantum Computing Community — Birzeit University"
             />
-            <span>BZU Quantum Computing Community</span>
           </div>
           <div class="org-card">
-            <img src="assets/birzeit-logo.webp" alt="Birzeit University logo" />
+            <img
+              class="sq"
+              src="assets/birzeit-innovation.png"
+              alt="Birzeit University — Innovation and Development Unit"
+            />
+          </div>
+        </div>
+
+        <p class="org-label reveal" style="margin-top: 44px">Powered by</p>
+        <div class="orgs reveal">
+          <div class="org-card">
+            <img src="assets/ibm-quantum.png" alt="IBM Quantum" />
+          </div>
+          <div class="org-card">
+            <img src="assets/qiskit.png" alt="Qiskit" />
           </div>
         </div>
 
@@ -1594,7 +1754,7 @@
             width="30"
             height="30"
           />
-          <span>Quantum&nbsp;Series</span>
+          <span>BZU Qiskit Fall Fest</span>
         </a>
         <p>Qiskit Fall Fest 2026 · Birzeit University</p>
         <img
@@ -1625,7 +1785,7 @@
       const formLive =
         REGISTRATION_FORM_URL && REGISTRATION_FORM_URL.startsWith("http");
       if (formLive) {
-        // once registration is open, the "opens 2 October" notes are no longer needed
+        // once registration is open, the "opens 10 October" notes are no longer needed
         ["opens-note", "opens-note-2"].forEach((id) => {
           const el = document.getElementById(id);
           if (el) el.hidden = true;
@@ -1642,7 +1802,7 @@
             if (a.getAttribute("href") === "#") {
               e.preventDefault();
               showToast(
-                "Registration opens 2 October — follow our pages so you don't miss it!",
+                "Registration opens 10 October — follow our pages so you don't miss it!",
               );
             }
           });
