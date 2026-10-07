@@ -1047,11 +1047,22 @@
       }
 
       /* ---------- open day extras ---------- */
+      .club-list {
+        margin-top: 20px;
+      }
+      .club-list-label {
+        display: block;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 10px;
+      }
       .club-chips {
         display: flex;
         gap: 10px;
         flex-wrap: wrap;
-        margin-top: 16px;
       }
       .club-chip {
         font-family: var(--mono);
@@ -1370,11 +1381,14 @@
               campus are setting up alongside us. Never heard of quantum
               computing? Perfect — this part is built for you.
             </p>
-            <div class="club-chips">
-              <span class="club-chip">AWS</span>
-              <span class="club-chip">IEEE</span>
-              <span class="club-chip">IMechE</span>
-              <span class="club-chip">Ka3kesh</span>
+            <div class="club-list">
+              <span class="club-list-label">Clubs joining us</span>
+              <div class="club-chips">
+                <span class="club-chip">AWS</span>
+                <span class="club-chip">IEEE</span>
+                <span class="club-chip">IMechE</span>
+                <span class="club-chip">Ka3kesh</span>
+              </div>
             </div>
             <div class="note-open">
               Open to everyone — no registration needed
