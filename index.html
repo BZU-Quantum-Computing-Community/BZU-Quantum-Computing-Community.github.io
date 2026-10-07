@@ -369,7 +369,7 @@
         font-size: clamp(17px, 2vw, 21px);
         color: var(--muted);
         max-width: 560px;
-        margin-bottom: 28px;
+        margin-bottom: 40px;
       }
       .hero-sub strong {
         color: var(--text);
@@ -383,44 +383,6 @@
         margin-bottom: 56px;
       }
 
-      .hero-facts {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        margin: 0 0 30px;
-      }
-      .fact {
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-        padding: 12px 18px;
-        border-radius: 14px;
-        background: var(--panel);
-        box-shadow: inset 0 0 0 1px var(--line);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-      }
-      .fact-k {
-        font-family: var(--mono);
-        font-size: 11px;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--muted);
-      }
-      .fact-v {
-        font-size: 15px;
-        font-weight: 600;
-      }
-      .fact.open {
-        background: rgba(91, 200, 224, 0.16);
-        box-shadow: inset 0 0 0 1px rgba(91, 200, 224, 0.5);
-      }
-      .fact.open .fact-k {
-        color: #9fe3f2;
-      }
-      .fact.open .fact-v {
-        color: #dcf5fb;
-      }
       .hero-note {
         font-family: var(--mono);
         font-size: 13.5px;
@@ -1229,23 +1191,10 @@
           takes you from "I've heard of it" to running a real IBM quantum
           computer yourself. No physics, no experience needed.
         </p>
-        <div class="hero-facts">
-          <div class="fact">
-            <span class="fact-k">Open Day</span>
-            <span class="fact-v">Sat 10 October · 12:00 – 17:00</span>
-          </div>
-          <div class="fact">
-            <span class="fact-k">Where</span>
-            <span class="fact-v">Najad Zaani Building, Birzeit University</span>
-          </div>
-          <div class="fact open">
-            <span class="fact-k">Entry</span>
-            <span class="fact-v">Every student · no registration</span>
-          </div>
-        </div>
+        
         <div class="hero-ctas">
           <a class="btn btn-primary" id="cta-openday" href="#openday"
-            >Join us Saturday — free entry</a
+            >Join the Open Day</a
           >
           <a class="btn btn-ghost" id="cta-register" data-register href="#register"
             >Register for the bootcamp</a
@@ -1629,7 +1578,7 @@
           </h2>
           <p>
             Four Tuesdays, your laptop, and a seat in the room — that's the whole
-            commitment. The Open Day on 10 October is free to walk into either
+            commitment. The Open Day on 10 October is open to walk into either
             way.
           </p>
           <a
