@@ -155,7 +155,8 @@
         }
       }
 
-      /* ---------- palette bands ---------- */
+      /* ---------- palette band ---------- */
+      /* Used once, on the Open Day — the one section that should stand out. */
       .band-indigo {
         background: linear-gradient(
           180deg,
@@ -166,43 +167,8 @@
         );
       }
       .band-indigo p,
-      .band-indigo .faq-body,
-      .band-indigo .qubit-log {
-        color: #cfcbe8;
-      }
-      .band-deep {
-        background: linear-gradient(
-          180deg,
-          rgba(12, 21, 57, 0),
-          rgba(82, 73, 117, 0.9) 18%,
-          rgba(82, 73, 117, 0.9) 82%,
-          rgba(12, 21, 57, 0)
-        );
-      }
-      .band-deep p,
-      .band-deep .lead {
+      .band-indigo .lead {
         color: #ded7ea;
-      }
-      .band-light {
-        background: #a488ba;
-      }
-      .band-light .kicker {
-        color: #2f2e78;
-      }
-      .band-light h2 {
-        color: #0c1539;
-      }
-      .band-light .lead {
-        color: #372f5c;
-      }
-      .band-light .lead strong {
-        color: #0c1539;
-      }
-      .band-light .grad-text {
-        background: linear-gradient(100deg, #0c1539, #2f2e78);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
       }
 
       /* ---------- buttons ---------- */
@@ -657,55 +623,19 @@
         border-radius: var(--radius);
         background: var(--panel);
         box-shadow: inset 0 0 0 1px var(--line);
-        border-top: 3px solid transparent;
-        transition:
-          transform 0.25s ease,
-          box-shadow 0.25s ease;
+        border-top: 3px solid var(--cyan);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
       }
       .card:hover {
         transform: translateY(-4px);
         box-shadow: inset 0 0 0 1px rgba(164, 136, 186, 0.4);
-      }
-      .cards .card:nth-child(1) {
-        border-top-color: var(--cyan);
-        background: linear-gradient(
-          180deg,
-          rgba(91, 200, 224, 0.16),
-          var(--panel) 55%
-        );
-      }
-      .cards .card:nth-child(2) {
-        border-top-color: var(--violet);
-        background: linear-gradient(
-          180deg,
-          rgba(164, 136, 186, 0.2),
-          var(--panel) 55%
-        );
-      }
-      .cards .card:nth-child(3) {
-        border-top-color: #524975;
-        background: linear-gradient(
-          180deg,
-          rgba(82, 73, 117, 0.55),
-          var(--panel) 55%
-        );
-      }
-      .cards .card:nth-child(4) {
-        border-top-color: #2f2e78;
-        background: linear-gradient(
-          180deg,
-          rgba(47, 46, 120, 0.7),
-          var(--panel) 55%
-        );
       }
       .card h3 {
         font-size: 20px;
         margin-bottom: 10px;
         letter-spacing: -0.01em;
       }
-      .card h3 span {
-        margin-right: 10px;
-      }
+      
       .card p {
         color: var(--muted);
         font-size: 15.5px;
@@ -905,7 +835,7 @@
       /* ---------- faq ---------- */
       .faq {
         max-width: 740px;
-        margin: 50px auto 0;
+        margin: 50px 0 0;
       }
       details {
         border-radius: 14px;
@@ -1343,12 +1273,12 @@
         <div class="reveal">
           <div class="kicker">The programme</div>
           <h2>
-            Two parts.<br />One <span class="grad-text">quantum leap.</span>
+            Two parts. One you walk into,<br />
+            <span class="grad-text">one you sign up for.</span>
           </h2>
           <p class="lead">
-            The Open Day is a one-day festival anyone can walk into. The
-            Bootcamp is the four-Tuesday course that follows — that one needs a
-            seat.
+            The Open Day is a one-day festival anyone can walk into. The Bootcamp
+            is the four-Tuesday course that follows.
           </p>
         </div>
 
@@ -1411,7 +1341,7 @@
     </section>
 
     <!-- ================= OPEN DAY ================= -->
-    <section id="openday" class="band-deep">
+    <section id="openday" class="band-indigo">
       <div class="wrap">
         <div class="od-head reveal">
           <div>
@@ -1479,8 +1409,8 @@
         <div class="reveal">
           <div class="kicker">Why join</div>
           <h2>
-            Not a lecture series.<br />A
-            <span class="grad-text">launch pad.</span>
+            Not a lecture series.<br />You'll be the one
+            <span class="grad-text">running the code.</span>
           </h2>
           <p class="lead">
             We follow IBM Qiskit's "Use a Quantum Computer Today" course —
@@ -1492,21 +1422,21 @@
         </div>
         <div class="cards">
           <div class="card reveal">
-            <h3><span>🧪</span>Run real quantum hardware</h3>
+            <h3>Run real quantum hardware</h3>
             <p>
               You'll queue circuits on IBM's actual quantum computers and read
               back results from genuine qubits — not just a simulator.
             </p>
           </div>
           <div class="card reveal">
-            <h3><span>🤝</span>Learn together, not alone</h3>
+            <h3>Learn together, not alone</h3>
             <p>
               Every session is face-to-face with mentors in the room, so the
               moment you're stuck, someone's there.
             </p>
           </div>
           <div class="card reveal">
-            <h3><span>📜</span>Certified by IBM Quantum</h3>
+            <h3>Certified by IBM Quantum</h3>
             <p>
               Complete the four bootcamp sessions and you receive a
               <strong>Certificate of Participation from IBM Quantum</strong> —
@@ -1514,7 +1444,7 @@
             </p>
           </div>
           <div class="card reveal">
-            <h3><span>⚔️</span>Finish with a hackathon</h3>
+            <h3>Finish with a hackathon</h3>
             <p>
               The series closes with a hackathon challenge — your chance to turn
               your new quantum skills into something of your own.
@@ -1525,7 +1455,7 @@
     </section>
 
     <!-- ================= QUBIT LAB ================= -->
-    <section id="lab" class="band-indigo">
+    <section id="lab">
       <div class="wrap lab">
         <div class="lab-copy reveal">
           <div class="kicker">Open the black box</div>
@@ -1602,7 +1532,7 @@
     </section>
 
     <!-- ================= FALL FEST ================= -->
-    <section id="fallfest" class="band-light" style="padding: 90px 0">
+    <section id="fallfest" style="padding: 90px 0">
       <div class="wrap ff">
         <div class="reveal">
           <div class="kicker">Part of something global</div>
@@ -1632,9 +1562,9 @@
     </section>
 
     <!-- ================= FAQ ================= -->
-    <section id="faq" class="band-indigo">
+    <section id="faq">
       <div class="wrap">
-        <div class="reveal" style="text-align: center">
+        <div class="reveal">
           <div class="kicker">FAQ</div>
           <h2>Frequently asked</h2>
         </div>
@@ -1684,8 +1614,9 @@
             Curiosity is the <span class="grad-text">only requirement.</span>
           </h2>
           <p>
-            No physics background. No coding experience. If you've ever wondered
-            what's really inside a quantum computer, this was made for you.
+            Four Tuesdays, your laptop, and a seat in the room — that's the whole
+            commitment. The Open Day on 10 October is free to walk into either
+            way.
           </p>
           <a
             class="btn btn-primary"
