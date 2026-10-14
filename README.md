@@ -6,7 +6,7 @@ Home of the **Quantum Series**, Birzeit University's edition of [Qiskit Fall Fes
 
 ## What this is
 
-A single-page static site that introduces students to quantum computing and drives registration for the Quantum Series — five in-person sessions running October–November 2026, opening with the Quantum Open Day on Saturday 10 October.
+A single-page static site that introduces students to quantum computing and drives registration for the Quantum Series — four in-person Tuesday sessions from 20 October to 10 November 2026, ending with a hackathon. The Quantum Open Day (Saturday 10 October) is kept on the page as a recap.
 
 The page includes an interactive 3D Bloch sphere so visitors can apply quantum gates to a real qubit simulation and watch it collapse when measured. It runs on plain canvas with no libraries.
 
@@ -34,7 +34,7 @@ Registration goes through a Google Form. Near the top of the `<script>` block in
 const REGISTRATION_FORM_URL = "";
 ```
 
-Paste the form URL between the quotes and every "Register" button on the page points to it. While it is empty, the buttons show a "registration opens soon" message instead of a dead link.
+Paste the form URL between the quotes and every "Register" button on the page points to it — but only from `REGISTRATION_OPENS` (Friday 16 October, 17:00 Palestine time). Before then, or while the URL is empty, the buttons show a "registration opens Friday" message instead, so the link can be pasted early. The hero countdown runs to registration opening, then to each session in turn, and disappears after the last one.
 
 ### Local preview
 

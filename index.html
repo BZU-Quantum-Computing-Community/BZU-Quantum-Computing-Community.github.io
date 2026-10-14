@@ -6,7 +6,7 @@
     <title>BZU Qiskit Fall Fest 2026</title>
     <meta
       name="description"
-      content="BZU Qiskit Fall Fest 2026 — a Quantum Open Day open to every student, then a four-Tuesday bootcamp on real IBM quantum computers. By the BZU Quantum Computing Community at Birzeit University."
+      content="BZU Qiskit Fall Fest 2026 — a four-Tuesday bootcamp on real IBM quantum computers, starting 20 October. By the BZU Quantum Computing Community at Birzeit University."
     />
     <!-- Social sharing preview (Open Graph / Twitter). URLs must stay absolute.
      If the site ever moves to a custom domain, update the four URLs below to match. -->
@@ -18,7 +18,7 @@
     />
     <meta
       property="og:description"
-      content="Quantum computers won't stay a black box. A Quantum Open Day anyone can walk into on 10 October, then a four-session bootcamp on real IBM quantum computers — with a Certificate of Participation from IBM Quantum."
+      content="Quantum computers won't stay a black box. Four hands-on Tuesdays on real IBM quantum computers, starting 20 October — with a Certificate of Participation from IBM Quantum. Registration opens Friday 16 October at 5 PM."
     />
     <meta
       property="og:url"
@@ -37,7 +37,7 @@
     />
     <meta
       name="twitter:description"
-      content="From black box to running a real IBM quantum computer. Everyone's invited to the Quantum Open Day on 10 October — the bootcamp follows."
+      content="From black box to running a real IBM quantum computer. Four Tuesdays starting 20 October — registration opens Friday 16 October at 5 PM."
     />
     <meta
       name="twitter:image"
@@ -156,7 +156,7 @@
       }
 
       /* ---------- palette band ---------- */
-      /* Used once, on the Open Day — the one section that should stand out. */
+      /* Used once, on the Open Day recap. */
       .band-indigo {
         background: linear-gradient(
           180deg,
@@ -393,6 +393,7 @@
       .hero-note strong {
         color: var(--cyan);
         font-weight: 500;
+        white-space: nowrap;
       }
       .countdown {
         display: flex;
@@ -1167,7 +1168,6 @@
         </a>
         <nav class="nav-links">
           <a href="#schedule">Programme</a>
-          <a href="#openday">Open Day</a>
           <a href="#why">Why join</a>
           <a href="#faq">FAQ</a>
           <a class="btn btn-primary" data-register href="#register"
@@ -1189,28 +1189,22 @@
         <p class="hero-sub">
           To most people, it's a mysterious black box.
           <strong>After this Fall Fest, it won't be — not to you.</strong>
-          An Open Day anyone can walk into, then a four-Tuesday bootcamp that
-          takes you from "I've heard of it" to running a real IBM quantum
-          computer yourself. No physics, no experience needed.
+          Four Tuesdays, starting 20 October, that take you from "I've heard of
+          it" to running a real IBM quantum computer yourself. No physics, no
+          experience needed.
         </p>
 
         <div class="hero-ctas">
-          <a class="btn btn-primary" id="cta-openday" href="#openday"
-            >Join the Open Day</a
-          >
-          <a
-            class="btn btn-ghost"
-            id="cta-register"
-            data-register
-            href="#register"
+          <a class="btn btn-primary" data-register href="#register"
             >Register for the bootcamp</a
           >
+          <a class="btn btn-ghost" href="#schedule">See the programme</a>
         </div>
         <p class="hero-note" id="opens-note">
-          Bootcamp registration opens <strong>10 October</strong>
+          Registration opens <strong>Friday 16 Oct · 5:00 PM</strong>
         </p>
-        <div>
-          <div class="cd-title">Quantum Open Day begins in</div>
+        <div id="cd-block">
+          <div class="cd-title" id="cd-title">Registration opens in</div>
           <div class="countdown" aria-live="polite">
             <div class="cd-cell">
               <div class="cd-num" id="cd-d">--</div>
@@ -1239,39 +1233,24 @@
         <div class="reveal">
           <div class="kicker">The programme</div>
           <h2>
-            Two parts. One you walk into,<br />
-            <span class="grad-text">one you sign up for.</span>
+            Four Tuesdays.<br />
+            <span class="grad-text">Then a hackathon.</span>
           </h2>
           <p class="lead">
-            The Open Day is a one-day festival anyone can walk into. The
-            Bootcamp is the four-Tuesday course that follows.
+            A hands-on bootcamp that starts on Tuesday 20 October — in person,
+            on your own laptop, with our team in the room. It ends with
+            certificates and the launch of the hackathon.
           </p>
         </div>
 
         <p class="track-label reveal">
-          <span class="track-num">01</span> Quantum Open Day
-          <span class="track-tag open">Open to everyone</span>
-        </p>
-        <div class="sched sched-one">
-          <div class="sess hot reveal">
-            <div class="sess-id">Open Day</div>
-            <div class="sess-date">Sat, 10 Oct</div>
-            <div class="sess-time">12:00 – 17:00</div>
-            <div class="sess-focus">
-              Booths, club stands and the Quantum and Qiskit 101 talk — just
-              walk in, no registration
-            </div>
-          </div>
-        </div>
-
-        <p class="track-label reveal">
-          <span class="track-num">02</span> The Bootcamp
+          The Bootcamp
           <span class="track-tag">Registration required</span>
         </p>
         <div class="sched sched-four">
-          <div class="sess reveal">
+          <div class="sess hot reveal">
             <div class="sess-id">Session 1</div>
-            <div class="sess-date">Tue, 13 Oct</div>
+            <div class="sess-date">Tue, 20 Oct</div>
             <div class="sess-time">14:00 – 16:00</div>
             <div class="sess-focus">
               First qubits, first circuits — hands-on
@@ -1279,19 +1258,19 @@
           </div>
           <div class="sess reveal">
             <div class="sess-id">Session 2</div>
-            <div class="sess-date">Tue, 20 Oct</div>
+            <div class="sess-date">Tue, 27 Oct</div>
             <div class="sess-time">14:00 – 16:00</div>
             <div class="sess-focus">Deeper into the quantum toolbox</div>
           </div>
           <div class="sess reveal">
             <div class="sess-id">Session 3</div>
-            <div class="sess-date">Tue, 27 Oct</div>
+            <div class="sess-date">Tue, 3 Nov</div>
             <div class="sess-time">14:00 – 16:00</div>
             <div class="sess-focus">Real algorithms on real hardware</div>
           </div>
           <div class="sess final reveal">
             <div class="sess-id">Session 4</div>
-            <div class="sess-date">Tue, 3 Nov</div>
+            <div class="sess-date">Tue, 10 Nov</div>
             <div class="sess-time">14:00 – 17:00</div>
             <div class="sess-focus">
               Grand finale — certificates + hackathon launch
@@ -1303,73 +1282,6 @@
           and you receive a
           <b>Certificate of Participation from IBM Quantum</b>.
         </p>
-      </div>
-    </section>
-
-    <!-- ================= OPEN DAY ================= -->
-    <section id="openday" class="band-indigo">
-      <div class="wrap">
-        <div class="od-head reveal">
-          <div>
-            <div class="kicker">Part one</div>
-            <h2>Quantum <span class="grad-text">Open Day</span></h2>
-            <p class="lead">
-              One full day where campus goes quantum — open to
-              <strong style="color: var(--text)">every student</strong>,
-              registered or not. Just walk in.
-            </p>
-          </div>
-          <div class="od-meta">
-            <div class="chip">Sat, 10 October</div>
-            <div class="chip">12:00 – 17:00</div>
-            <div class="chip">Najad Zaani Building</div>
-          </div>
-        </div>
-
-        <div class="timeline">
-          <div class="tl-item reveal">
-            <div class="tl-time">12:00 — 14:00</div>
-            <h3>Booths, games &amp; challenges</h3>
-            <p>
-              Beat our players at quantum games, crack puzzle challenges and
-              step inside a VR quantum experience. Student clubs from across
-              campus are setting up alongside us. Never heard of quantum
-              computing? Perfect — this part is built for you.
-            </p>
-            <div class="club-list">
-              <span class="club-list-label">Clubs joining us</span>
-              <div class="club-chips">
-                <span class="club-chip">AWS</span>
-                <span class="club-chip">IEEE</span>
-                <span class="club-chip">IMechE</span>
-                <span class="club-chip">Ka3kesh</span>
-                <span class="club-chip">Sm3to</span>
-              </div>
-            </div>
-            <div class="note-open">
-              Open to everyone — no registration needed
-            </div>
-          </div>
-          <div class="tl-item reveal">
-            <div class="tl-time">14:00 — 15:00</div>
-            <h3>Talk: Quantum and Qiskit 101</h3>
-            <p>
-              The clearest hour you'll get on what a quantum computer actually
-              is, what Qiskit does, and why any of it matters — starting from
-              nothing. Joins us live on the big screen, and we watch together in
-              the room.
-            </p>
-            <div class="speaker">
-              <div>
-                <div class="speaker-name">Karim Magdy</div>
-                <div class="speaker-role">Qiskit Advocate · IBM Quantum</div>
-              </div>
-            </div>
-            <div class="note-open">
-              Open to everyone — no registration needed
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -1531,6 +1443,68 @@
       </div>
     </section>
 
+    <!-- ================= OPEN DAY RECAP ================= -->
+    <section id="openday" class="band-indigo">
+      <div class="wrap">
+        <div class="od-head reveal">
+          <div>
+            <div class="kicker">Where it started</div>
+            <h2>Quantum <span class="grad-text">Open Day</span></h2>
+            <p class="lead">
+              The Fall Fest opened with a day where campus went quantum.
+              Thank you to
+              <strong style="color: var(--text)">everyone who walked in</strong>.
+            </p>
+          </div>
+          <div class="od-meta">
+            <div class="chip">Sat, 10 October</div>
+            <div class="chip">12:00 – 17:00</div>
+            <div class="chip">Najad Zaani Building</div>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item reveal">
+            <div class="tl-time">12:00 — 14:00</div>
+            <h3>Booths, games &amp; challenges</h3>
+            <p>
+              Quantum games, puzzle challenges and booths from student clubs
+              across campus — built for people who had never heard of quantum
+              computing.
+            </p>
+            <div class="club-list">
+              <span class="club-list-label">Clubs who joined us</span>
+              <div class="club-chips">
+                <span class="club-chip">AWS</span>
+                <span class="club-chip">IEEE</span>
+                <span class="club-chip">IMechE</span>
+                <span class="club-chip">Ka3kesh</span>
+                <span class="club-chip">Sm3to</span>
+              </div>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-time">14:00 — 15:00</div>
+            <h3>Talk: Quantum and Qiskit 101</h3>
+            <p>
+              An hour on what a quantum computer actually is, what Qiskit does,
+              and why any of it matters — live on the big screen, watched
+              together in the room.
+            </p>
+            <div class="speaker">
+              <div>
+                <div class="speaker-name">Karim Magdy</div>
+                <div class="speaker-role">Qiskit Advocate · IBM Quantum</div>
+              </div>
+            </div>
+            <div class="note-open">
+              Missed it? The bootcamp starts from zero — you can still join.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= FAQ ================= -->
     <section id="faq">
       <div class="wrap">
@@ -1548,19 +1522,25 @@
             </div>
           </details>
           <details>
-            <summary>Can I come to the Open Day without registering?</summary>
+            <summary>When does registration open?</summary>
             <div class="faq-body">
-              Yes! The whole Open Day on 10 October is open to every student on
-              campus — booths, games and the guest speaker — with no
-              registration needed. Registering is for the four working sessions
-              that follow, so sign up if you want the full series.
+              Friday 16 October at 5:00 PM. From then, every Register button on
+              this page takes you to the form. Session 1 is on Tuesday 20
+              October, so sign up early.
+            </div>
+          </details>
+          <details>
+            <summary>Do I have to come to all four sessions?</summary>
+            <div class="faq-body">
+              To receive the Certificate of Participation from IBM Quantum, yes
+              — and each session builds on the one before.
             </div>
           </details>
           <details>
             <summary>What should I bring?</summary>
             <div class="faq-body">
-              For the Open Day, just curiosity. For the four working sessions,
-              bring your laptop — everything there is hands-on.
+              Your laptop, charged — every session is hands-on. Our team helps
+              you get it set up.
             </div>
           </details>
           <details>
@@ -1584,9 +1564,8 @@
             Curiosity is the <span class="grad-text">only requirement.</span>
           </h2>
           <p>
-            Four Tuesdays, your laptop, and a seat in the room — that's the
-            whole commitment. The Open Day on 10 October is open to walk into
-            either way.
+            Four Tuesdays starting 20 October, your laptop, and a seat in the
+            room — that's the whole commitment.
           </p>
           <a
             class="btn btn-primary"
@@ -1596,7 +1575,7 @@
             >Register now</a
           >
           <div class="fine" id="opens-note-2">
-            Registration opens 10 October
+            Registration opens Friday 16 October at 5:00 PM
           </div>
         </div>
       </div>
@@ -1728,7 +1707,12 @@
       /* =====================================================================
    REGISTRATION LINK — paste your Google Form URL between the quotes:
    ===================================================================== */
-      const REGISTRATION_FORM_URL = "";
+      const REGISTRATION_FORM_URL = "https://forms.gle/BqDyXydxABcEnFRKA";
+
+      /* Registration opens Friday 16 October, 17:00 Palestine time. Until then the
+         Register buttons show a notice instead of the form, even once the URL
+         above is filled in — so it is safe to paste the link early. */
+      const REGISTRATION_OPENS = new Date("2026-10-16T17:00:00+03:00");
 
       /* ---------- registration buttons ---------- */
       const toast = document.getElementById("toast");
@@ -1739,47 +1723,41 @@
         clearTimeout(toastTimer);
         toastTimer = setTimeout(() => toast.classList.remove("show"), 3200);
       }
-      const formLive =
-        REGISTRATION_FORM_URL && REGISTRATION_FORM_URL.startsWith("http");
-      if (formLive) {
-        // once registration is open, the "opens 10 October" notes are no longer needed
+      const hasForm = REGISTRATION_FORM_URL.startsWith("http");
+      const registrationOpen = () =>
+        hasForm && Date.now() >= REGISTRATION_OPENS.getTime();
+      const registerLinks = document.querySelectorAll("[data-register]");
+
+      // Runs on load and every countdown tick, so a page left open from before
+      // Friday 17:00 switches over without a reload.
+      let formLinked = false;
+      function syncRegistration() {
+        if (formLinked || !registrationOpen()) return;
+        formLinked = true;
+        // the "registration opens Friday" notes are no longer needed
         ["opens-note", "opens-note-2"].forEach((id) => {
           const el = document.getElementById(id);
           if (el) el.hidden = true;
         });
-      }
-
-      /* Hero CTA priority. Until the Open Day happens, walking in is the thing a
-         student can actually do today, so it leads. Afterwards — or as soon as the
-         form is live — signing up for the bootcamp takes over. */
-      (function () {
-        const openDay = document.getElementById("cta-openday");
-        const register = document.getElementById("cta-register");
-        if (!openDay || !register) return;
-        const openDayOver =
-          Date.now() > new Date("2026-10-10T17:00:00").getTime();
-        if (openDayOver) openDay.textContent = "See the Open Day";
-        if (formLive || openDayOver) {
-          openDay.className = "btn btn-ghost";
-          register.className = "btn btn-primary";
-        }
-      })();
-      document.querySelectorAll("[data-register]").forEach((a) => {
-        if (formLive) {
+        registerLinks.forEach((a) => {
           a.href = REGISTRATION_FORM_URL;
           a.target = "_blank";
           a.rel = "noopener";
-        } else {
-          a.addEventListener("click", (e) => {
-            // let nav/hero buttons still scroll to the register section
-            if (a.getAttribute("href") === "#") {
-              e.preventDefault();
-              showToast(
-                "Registration opens 10 October — follow our pages so you don't miss it!",
-              );
-            }
-          });
-        }
+        });
+      }
+      syncRegistration();
+      registerLinks.forEach((a) => {
+        a.addEventListener("click", (e) => {
+          // once open, the link itself goes to the form; before that, let
+          // nav/hero buttons still scroll to the register section
+          if (formLinked || a.getAttribute("href") !== "#") return;
+          e.preventDefault();
+          showToast(
+            Date.now() < REGISTRATION_OPENS.getTime()
+              ? "Registration opens Friday 16 October at 5:00 PM — follow our pages so you don't miss it!"
+              : "Registration is opening — check back in a few minutes!",
+          );
+        });
       });
 
       /* ---------- sticky header ---------- */
@@ -1791,9 +1769,28 @@
       );
 
       /* ---------- countdown ---------- */
-      const target = new Date("2026-10-10T12:00:00");
+      /* Counts to whatever comes next. Palestine is UTC+3 until clocks go back at
+         the end of October, then UTC+2. */
+      const milestones = [
+        { at: REGISTRATION_OPENS, label: "Registration opens in" },
+        { at: new Date("2026-10-20T14:00:00+03:00"), label: "Session 1 begins in" },
+        { at: new Date("2026-10-27T14:00:00+03:00"), label: "Session 2 begins in" },
+        { at: new Date("2026-11-03T14:00:00+02:00"), label: "Session 3 begins in" },
+        { at: new Date("2026-11-10T14:00:00+02:00"), label: "The final session begins in" },
+      ];
+      const cdBlock = document.getElementById("cd-block");
+      const cdTitle = document.getElementById("cd-title");
+      let timer;
       function tick() {
-        let diff = Math.max(0, target - Date.now());
+        syncRegistration();
+        const next = milestones.find((m) => m.at > Date.now());
+        if (!next) {
+          cdBlock.hidden = true;
+          clearInterval(timer);
+          return;
+        }
+        cdTitle.textContent = next.label;
+        let diff = next.at - Date.now();
         const d = Math.floor(diff / 864e5);
         const h = Math.floor((diff % 864e5) / 36e5);
         const m = Math.floor((diff % 36e5) / 6e4);
@@ -1805,7 +1802,7 @@
         document.getElementById("cd-s").textContent = pad(s);
       }
       tick();
-      setInterval(tick, 1000);
+      timer = setInterval(tick, 1000);
 
       /* ---------- scroll reveal ---------- */
       const io = new IntersectionObserver(
